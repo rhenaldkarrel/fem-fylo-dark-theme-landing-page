@@ -1,0 +1,84 @@
+.quotes {
+
+    &__grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        
+        @include breakpoint(medium) {
+            max-width: 85%;
+            margin: 0 auto;
+        }
+    }
+
+    .quote {
+        background: $testiBlue;
+        padding: 1.5625em;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+
+        @include breakpoint(medium) {
+            padding: 2.8125em;
+        }
+
+        &:first-child::before {
+            content: '';
+            background-image: url(../images/bg-quotes.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            width: 20px;
+            height: 15px;
+            top: -16px;
+            left: 0px;
+
+            @include breakpoint(medium){
+                top: -30px;
+                left: -25px;
+                width: 60px;
+                height: 45px;
+            }
+        }
+
+        p {
+            font-size: .5em;
+            margin-bottom: 1.25em;
+
+            @include breakpoint(medium) {
+                font-size: .8em;
+                margin-bottom: 1.875em;
+            }
+        }
+    }
+
+    .caption {
+        display: flex;
+        align-items: center;
+
+        &__images {
+            display: flex;
+            align-items: center;
+            
+            img {
+                width: 25px;
+                border-radius: 50%;
+                margin-right: 7px;
+            }
+        }
+
+        &__details {
+
+            .name {
+                font-size: .75em;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+
+            .position {
+                font-size: .5em;
+                margin: 0;
+            }
+        }
+    }
+}

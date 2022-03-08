@@ -1,0 +1,48 @@
+.hero {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $introBlue;
+
+    &::after {
+        content:"";
+        position: absolute;
+        width: 100%;
+        height: 40vw;
+        bottom: 0;
+        background-image: url('../images/bg-curvy-mobile.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+
+        @include breakpoint(medium) {
+            background-image: url('../images/bg-curvy-desktop.svg');
+            height: 33vw;
+        }
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    img {
+        width: 100%;
+        max-width: 715px;
+    }
+
+    h1 {
+        max-width: 678px;
+        font-size: 1.75em;
+        line-height: 1.5;
+        padding: 0.4em 0;
+    }
+
+    p {
+        max-width: 585px;
+        font-size: 0.95em;
+        margin-bottom: 2em;
+    }
+}

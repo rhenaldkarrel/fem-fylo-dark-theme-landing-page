@@ -1,0 +1,25 @@
+.features {
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        max-width: 850px;
+        gap: 6.1vw 9.3vw;
+        margin: 0 auto;
+    }
+
+    .feature {
+        text-align: center;
+
+        &-desc {
+            font-size: .875rem;
+        }
+
+        &-image {
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

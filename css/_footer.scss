@@ -1,0 +1,68 @@
+.footer {
+	background-color: $footerBlue;
+	padding: 12rem 3rem 2rem;
+	font-size: 0.85rem;
+	position: relative;
+	top: 12rem;
+	z-index: 1;
+
+	@include breakpoint(medium) {
+		padding: 12rem 5rem;
+		top: 20rem;
+	}
+
+	&__columns {
+		display: flex;
+		flex-direction: column;
+		margin-top: 1.5rem;
+		grid-template-rows: repeat(1fr);
+
+		@include breakpoint(medium) {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+			gap: 3.125rem;
+		}
+	}
+
+	&__column-contact {
+		display: flex;
+		margin-bottom: 2rem;
+		img {
+			height: 20px;
+			margin-right: 24px;
+		}
+		@include breakpoint(medium) {
+			margin-bottom: 0;
+		}
+	}
+
+	& li {
+		list-style: none;
+		margin-bottom: 1.25rem;
+	}
+
+	& ul {
+		margin-block-start: 0;
+		padding: 0;
+	}
+
+	&__social-media {
+		display: flex;
+		justify-content: center;
+
+		@include breakpoint(medium) {
+			justify-content: space-between;
+		}
+
+		& i {
+			border: 1px solid white;
+			padding: 1rem;
+			border-radius: 100%;
+			margin-right: 0.5rem;
+
+			@include breakpoint(medium) {
+				margin-right: 0;
+			}
+		}
+	}
+}
